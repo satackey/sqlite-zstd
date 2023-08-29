@@ -75,12 +75,12 @@ jobs:
               use-cross: use-cross,
               features: build_extension,
           }
-          - {
-              os: ubuntu-18.04,
-              target: x86_64-unknown-linux-gnu,
-              use-cross: use-cross,
-              features: build_extension,
-            }
+          # - {
+          #     os: ubuntu-18.04,
+          #     target: x86_64-unknown-linux-gnu,
+          #     use-cross: use-cross,
+          #     features: build_extension,
+          #   }
           #- {
           #      os: ubuntu-18.04,
           #      target: x86_64-unknown-linux-musl,
