@@ -63,12 +63,12 @@ jobs:
       matrix:
         job:
           # { os, target, cargo-options, features, use-cross, toolchain }
-          - {
-              os: ubuntu-latest,
-              target: arm-unknown-linux-gnueabihf,
-              use-cross: use-cross,
-              features: build_extension,
-            }
+          # - {
+          #     os: ubuntu-latest,
+          #     target: arm-unknown-linux-gnueabihf,
+          #     use-cross: use-cross,
+          #     features: build_extension,
+          #   }
           - {
               os: ubuntu-latest,
               target: aarch64-unknown-linux-musl,
@@ -86,21 +86,21 @@ jobs:
           #      target: x86_64-unknown-linux-musl,
           #      use-cross: use-cross,
           #  }
-          - {
-              os: macos-latest,
-              target: x86_64-apple-darwin,
-              features: build_extension,
-            }
-          - {
-              os: windows-latest,
-              target: x86_64-pc-windows-gnu,
-              features: build_extension,
-            } ## !maint: [rivy; 2020-01-21] may break due to rust bug; follow possible solution from GH:rust-lang/rust#47048 (refs: GH:rust-lang/rust#47048 , GH:rust-lang/rust#53454 , GH:bike-barn/hermit#172 )
-          - {
-              os: windows-latest,
-              target: x86_64-pc-windows-msvc,
-              features: build_extension,
-            }
+          # - {
+          #     os: macos-latest,
+          #     target: x86_64-apple-darwin,
+          #     features: build_extension,
+          #   }
+          # - {
+          #     os: windows-latest,
+          #     target: x86_64-pc-windows-gnu,
+          #     features: build_extension,
+          #   } ## !maint: [rivy; 2020-01-21] may break due to rust bug; follow possible solution from GH:rust-lang/rust#47048 (refs: GH:rust-lang/rust#47048 , GH:rust-lang/rust#53454 , GH:bike-barn/hermit#172 )
+          # - {
+          #     os: windows-latest,
+          #     target: x86_64-pc-windows-msvc,
+          #     features: build_extension,
+          #   }
     steps:
       - uses: actions/checkout@v1
       - name: Install any prerequisites
